@@ -62,8 +62,7 @@ const fullText = "[Your typed message here...]"
 **src/components/Scene5.jsx** (lines 33-35)
 - Moving forward message - three customizable lines
 
-**src/components/Scene6.jsx** (lines 32, 52-57, 60)
-- Line 32: Gift box prompt text
+**src/components/Scene6.jsx** (lines 52-57, 60)
 - Lines 52-57: Final message lines
 - Line 60: Replace `[Your Name]` with your name
 

@@ -28,8 +28,8 @@ function Scene6() {
             />
           </div>
 
-          {/* Text prompting user to click - CUSTOMIZE THIS */}
-          <p className="main-text">[Gift box text...]</p>
+          {/* Text prompting user to click */}
+          <p className="main-text">Click to open your gift 🎁</p>
         </div>
       )}
 
