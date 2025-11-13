@@ -1,0 +1,284 @@
+.scene {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  animation: sceneEnter 0.8s ease-out;
+}
+
+@keyframes sceneEnter {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.fade-in {
+  animation: fadeIn 1s ease-in;
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+/* Character Styles */
+.character-container {
+  margin-bottom: 40px;
+}
+
+.character {
+  filter: drop-shadow(0 0 20px rgba(255, 192, 203, 0.6));
+}
+
+.character-placeholder {
+  font-size: 120px;
+  animation: float-character 3s ease-in-out infinite;
+}
+
+.character-placeholder.big {
+  font-size: 150px;
+}
+
+.character-image {
+  max-width: 200px;
+  max-height: 200px;
+  animation: float-character 3s ease-in-out infinite;
+  filter: drop-shadow(0 0 20px rgba(255, 192, 203, 0.6));
+}
+
+@media (max-width: 768px) {
+  .character-image {
+    max-width: 150px;
+    max-height: 150px;
+  }
+}
+
+@keyframes float-character {
+  0%, 100% {
+    transform: translateY(0);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.characters-together {
+  display: flex;
+  gap: 40px;
+  align-items: center;
+  justify-content: center;
+  margin-bottom: 40px;
+}
+
+/* Text Styles */
+.text-container {
+  text-align: center;
+  max-width: 600px;
+  margin: 0 auto;
+}
+
+.main-text {
+  font-size: 24px;
+  color: #ff69b4;
+  margin: 20px 0;
+  font-family: 'Comic Sans MS', cursive;
+  text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.3);
+  line-height: 1.6;
+}
+
+.typed-text {
+  font-size: 20px;
+  color: #ff69b4;
+  margin: 30px 0;
+  font-family: 'Comic Sans MS', cursive;
+  min-height: 60px;
+}
+
+/* Card Styles */
+.card {
+  background: rgba(255, 255, 255, 0.95);
+  border-radius: 30px;
+  padding: 50px;
+  max-width: 700px;
+  box-shadow: 0 10px 40px rgba(255, 192, 203, 0.4);
+  border: 3px solid rgba(255, 192, 203, 0.6);
+  animation: cardEnter 0.8s ease-out;
+}
+
+.card .character-container {
+  background: white;
+  border-radius: 15px;
+  padding: 20px;
+  display: inline-block;
+}
+
+@keyframes cardEnter {
+  from {
+    transform: scale(0.9);
+    opacity: 0;
+  }
+  to {
+    transform: scale(1);
+    opacity: 1;
+  }
+}
+
+.card-title {
+  font-size: 32px;
+  color: #ff1493;
+  font-family: 'Comic Sans MS', cursive;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 4px rgba(255, 192, 203, 0.3);
+}
+
+.apology-card {
+  max-width: 800px;
+}
+
+.apology-text p {
+  font-size: 18px;
+  color: #ff69b4;
+  margin: 20px 0;
+  font-family: 'Comic Sans MS', cursive;
+  line-height: 1.8;
+  text-align: left;
+}
+
+.highlight {
+  font-size: 20px !important;
+  font-weight: bold;
+  color: #ff1493 !important;
+  margin: 30px 0 !important;
+  text-align: center !important;
+}
+
+/* Button Styles */
+.scene-button {
+  background: linear-gradient(135deg, #ff69b4, #ff1493);
+  color: white;
+  border: none;
+  padding: 18px 45px;
+  font-size: 20px;
+  border-radius: 50px;
+  cursor: pointer;
+  font-family: 'Comic Sans MS', cursive;
+  box-shadow: 0 5px 20px rgba(255, 105, 180, 0.4);
+  transition: all 0.3s ease;
+  margin-top: 30px;
+}
+
+.scene-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 8px 30px rgba(255, 105, 180, 0.6);
+}
+
+.scene-button:active {
+  transform: translateY(-1px);
+}
+
+/* Gift Styles */
+.gift-container {
+  text-align: center;
+}
+
+.gift {
+  font-size: 150px;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  filter: drop-shadow(0 0 30px rgba(255, 192, 203, 0.8));
+  animation: pulse 2s ease-in-out infinite;
+}
+
+.gift-image {
+  width: 200px;
+  height: 200px;
+  object-fit: contain;
+}
+
+@keyframes pulse {
+  0%, 100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.1);
+  }
+}
+
+.gift:hover {
+  transform: scale(1.15);
+  filter: drop-shadow(0 0 50px rgba(255, 192, 203, 1));
+}
+
+/* Final Message */
+.final-message {
+  text-align: center;
+  max-width: 700px;
+}
+
+.final-message .character-image {
+  max-width: 450px;
+  max-height: 450px;
+}
+
+@media (max-width: 768px) {
+  .final-message .character-image {
+    max-width: 280px;
+    max-height: 280px;
+  }
+}
+
+.signature {
+  font-size: 18px;
+  color: #ff1493;
+  font-style: italic;
+  margin-top: 40px;
+  font-family: 'Comic Sans MS', cursive;
+}
+
+/* Responsive */
+@media (max-width: 768px) {
+  .card {
+    padding: 30px 20px;
+    margin: 20px;
+  }
+
+  .main-text {
+    font-size: 20px;
+  }
+
+  .character-placeholder {
+    font-size: 80px;
+  }
+
+  .character-placeholder.big {
+    font-size: 100px;
+  }
+
+  .card-title {
+    font-size: 24px;
+  }
+
+  .apology-text p {
+    font-size: 16px;
+  }
+
+  .scene-button {
+    padding: 15px 35px;
+    font-size: 18px;
+  }
+
+  .gift {
+    font-size: 100px;
+  }
+}

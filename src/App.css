@@ -1,0 +1,107 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+
+.app {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, #ffb3d9 0%, #ffd4e5 25%, #ffe5f0 50%, #fff0f5 75%, #ffc0cb 100%);
+  position: relative;
+  overflow-x: hidden;
+}
+
+/* Cute decorative background elements */
+.app::before {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    /* Large clouds */
+    radial-gradient(ellipse 200px 80px at 15% 20%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 180px 70px at 85% 15%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 220px 90px at 50% 80%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+    radial-gradient(ellipse 160px 60px at 75% 70%, rgba(255, 255, 255, 0.5) 0%, transparent 50%),
+    radial-gradient(ellipse 190px 75px at 25% 50%, rgba(255, 255, 255, 0.4) 0%, transparent 50%),
+    /* Subtle hearts pattern */
+    radial-gradient(circle 8px at 10% 30%, rgba(255, 182, 193, 0.3) 0%, transparent 100%),
+    radial-gradient(circle 6px at 90% 40%, rgba(255, 182, 193, 0.3) 0%, transparent 100%),
+    radial-gradient(circle 7px at 30% 70%, rgba(255, 182, 193, 0.3) 0%, transparent 100%),
+    radial-gradient(circle 9px at 70% 25%, rgba(255, 182, 193, 0.3) 0%, transparent 100%),
+    radial-gradient(circle 5px at 50% 90%, rgba(255, 182, 193, 0.3) 0%, transparent 100%),
+    /* Sparkles */
+    radial-gradient(circle 3px at 20% 60%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(circle 4px at 80% 85%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(circle 3px at 60% 35%, rgba(255, 255, 255, 0.6) 0%, transparent 100%),
+    radial-gradient(circle 5px at 40% 10%, rgba(255, 255, 255, 0.6) 0%, transparent 100%);
+  pointer-events: none;
+  z-index: 0;
+  animation: breathe 8s ease-in-out infinite;
+}
+
+/* Add animated background pattern */
+.app::after {
+  content: '';
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    repeating-linear-gradient(45deg, transparent, transparent 100px, rgba(255, 255, 255, 0.03) 100px, rgba(255, 255, 255, 0.03) 200px),
+    repeating-linear-gradient(-45deg, transparent, transparent 100px, rgba(255, 192, 203, 0.02) 100px, rgba(255, 192, 203, 0.02) 200px);
+  pointer-events: none;
+  z-index: 0;
+  animation: shimmer 20s linear infinite;
+}
+
+@keyframes breathe {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.8;
+  }
+}
+
+@keyframes shimmer {
+  0% {
+    transform: translateX(0) translateY(0);
+  }
+  100% {
+    transform: translateX(100px) translateY(100px);
+  }
+}
+
+.scene-container {
+  position: relative;
+  z-index: 2;
+}
+
+/* Scrollbar styling */
+::-webkit-scrollbar {
+  width: 10px;
+}
+
+::-webkit-scrollbar-track {
+  background: rgba(255, 192, 203, 0.1);
+}
+
+::-webkit-scrollbar-thumb {
+  background: rgba(255, 105, 180, 0.5);
+  border-radius: 5px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: rgba(255, 105, 180, 0.7);
+}
+
+/* Global text selection */
+::selection {
+  background: rgba(255, 105, 180, 0.3);
+  color: #ff1493;
+}

@@ -1,0 +1,183 @@
+.static-decorations {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  pointer-events: none;
+  z-index: 1;
+}
+
+.decoration {
+  position: absolute;
+  font-size: 30px;
+  opacity: 0.4;
+  animation: gentle-float 4s ease-in-out infinite;
+}
+
+/* Corner decorations */
+.decoration.top-left {
+  top: 60px;
+  left: 15px;
+  font-size: 40px;
+  opacity: 0.5;
+  animation: gentle-float 3s ease-in-out infinite;
+}
+
+.decoration.top-right {
+  top: 60px;
+  right: 80px;
+  font-size: 35px;
+  opacity: 0.5;
+  animation: gentle-float 3.5s ease-in-out infinite 0.5s;
+}
+
+.decoration.bottom-left {
+  bottom: 30px;
+  left: 30px;
+  font-size: 35px;
+  opacity: 0.5;
+  animation: gentle-float 3.2s ease-in-out infinite 1s;
+}
+
+.decoration.bottom-right {
+  bottom: 30px;
+  right: 30px;
+  font-size: 35px;
+  opacity: 0.5;
+  animation: gentle-float 3.8s ease-in-out infinite 1.5s;
+}
+
+/* Side decorations */
+.decoration.left-1 {
+  top: 30%;
+  left: 20px;
+  font-size: 28px;
+  animation: gentle-float 4s ease-in-out infinite 0.2s;
+}
+
+.decoration.left-2 {
+  top: 60%;
+  left: 25px;
+  font-size: 25px;
+  animation: gentle-float 4.5s ease-in-out infinite 0.8s;
+}
+
+.decoration.right-1 {
+  top: 35%;
+  right: 20px;
+  font-size: 28px;
+  animation: gentle-float 4.2s ease-in-out infinite 0.4s;
+}
+
+.decoration.right-2 {
+  top: 65%;
+  right: 25px;
+  font-size: 26px;
+  animation: gentle-float 4.8s ease-in-out infinite 1.2s;
+}
+
+/* Top decorations (clouds) */
+.decoration.top-1 {
+  top: 10%;
+  left: 20%;
+  font-size: 45px;
+  opacity: 0.3;
+  animation: cloud-drift 15s ease-in-out infinite;
+}
+
+.decoration.top-2 {
+  top: 15%;
+  left: 50%;
+  font-size: 40px;
+  opacity: 0.3;
+  animation: cloud-drift 18s ease-in-out infinite 5s;
+}
+
+.decoration.top-3 {
+  top: 8%;
+  right: 15%;
+  font-size: 50px;
+  opacity: 0.3;
+  animation: cloud-drift 20s ease-in-out infinite 10s;
+}
+
+/* Scattered decorations */
+.decoration.scatter-1 {
+  top: 25%;
+  left: 35%;
+  font-size: 22px;
+  opacity: 0.35;
+  animation: gentle-float 5s ease-in-out infinite 0.3s;
+}
+
+.decoration.scatter-2 {
+  top: 45%;
+  right: 30%;
+  font-size: 24px;
+  opacity: 0.35;
+  animation: gentle-float 5.5s ease-in-out infinite 0.9s;
+}
+
+.decoration.scatter-3 {
+  top: 70%;
+  left: 45%;
+  font-size: 20px;
+  opacity: 0.35;
+  animation: gentle-float 4.8s ease-in-out infinite 1.5s;
+}
+
+.decoration.scatter-4 {
+  top: 55%;
+  left: 15%;
+  font-size: 26px;
+  opacity: 0.35;
+  animation: gentle-float 5.2s ease-in-out infinite 0.6s;
+}
+
+.decoration.scatter-5 {
+  top: 80%;
+  right: 40%;
+  font-size: 23px;
+  opacity: 0.35;
+  animation: gentle-float 4.5s ease-in-out infinite 1.8s;
+}
+
+/* Animations */
+@keyframes gentle-float {
+  0%, 100% {
+    transform: translateY(0) rotate(0deg);
+  }
+  50% {
+    transform: translateY(-15px) rotate(5deg);
+  }
+}
+
+@keyframes cloud-drift {
+  0%, 100% {
+    transform: translateX(0);
+  }
+  50% {
+    transform: translateX(30px);
+  }
+}
+
+/* Responsive adjustments */
+@media (max-width: 768px) {
+  .decoration {
+    font-size: 24px;
+  }
+
+  .decoration.top-left,
+  .decoration.top-right,
+  .decoration.bottom-left,
+  .decoration.bottom-right {
+    font-size: 28px;
+  }
+
+  .decoration.top-1,
+  .decoration.top-2,
+  .decoration.top-3 {
+    font-size: 35px;
+  }
+}
