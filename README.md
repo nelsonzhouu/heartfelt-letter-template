@@ -40,30 +40,32 @@ npm install
 ### 4. Customize the Messages
 Edit these files to personalize your message:
 
-**src/components/Scene1.jsx** (line 37)
+**src/components/Scene1.jsx** (line 48)
 ```jsx
 <p className="main-text">Hey [Name], </p>  // Replace [Name]
 ```
 
-**src/components/Scene2.jsx** (line 6)
+**src/components/Scene2.jsx** (line 11)
 ```jsx
-const fullText = "Your opening message here..."
+const fullText = "[Your typed message here...]"
 ```
 
-**src/components/Scene3.jsx** (line 26)
+**src/components/Scene3.jsx** (line 42)
 ```jsx
-<p className="main-text">Your message...</p>
+<p className="main-text">[Your message...]</p>
 ```
 
-**src/components/Scene4.jsx** (lines 16-23)
+**src/components/Scene4.jsx** (lines 23-33)
 - Main message text - customize all paragraphs with your heartfelt message
+- Line 30 has a highlighted paragraph for emphasis
 
-**src/components/Scene5.jsx** (lines 25-27)
-- Moving forward message
+**src/components/Scene5.jsx** (lines 33-35)
+- Moving forward message - three customizable lines
 
-**src/components/Scene6.jsx** (lines 41-45)
-- Final promise and signature
-- Replace `[Your Name]` with your name
+**src/components/Scene6.jsx** (lines 32, 52-57, 60)
+- Line 32: Gift box prompt text
+- Lines 52-57: Final message lines
+- Line 60: Replace `[Your Name]` with your name
 
 ### 5. Run Development Server
 ```bash
@@ -162,12 +164,10 @@ Edit `src/App.css` and `src/components/Scene.css` to change the pink color schem
 
 MIT License - Feel free to use this template for personal messages!
 
-## 💝 Credits
+## Credits
 
 Sanrio characters (Cinnamoroll & My Melody) © Sanrio Co., Ltd.
 
 ---
 
-**Good luck with your message! 💕**
 
-Remember: Actions speak louder than words, but sometimes a heartfelt website can help express what's in your heart! 🎀
